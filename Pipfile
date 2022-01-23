@@ -12,3 +12,12 @@ mypy = "*"
 pytest = "*"
 
 [requires]
+
+
+[scripts]
+lint = "pipenv run flake8 . --count --max-complexity=10 --max-line-length=127 --statistics"
+type-hints = "mypy src"
+unit-test = "pytest -v"
+test = "pipenv run unit-test"
+test-coverage-create = "pipenv run coverage run -m pytest"
+test-coverage-report = "pipenv run coverage report --fail-under=90"
