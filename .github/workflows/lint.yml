@@ -22,5 +22,6 @@ jobs:
         python -m pip install --upgrade pipenv wheel
         pipenv install --deploy --dev
     - name: Lint with Python ${{ matrix.python-version }}
-      run:
+      run: |
         pipenv run lint
+        pipenv run black-check
