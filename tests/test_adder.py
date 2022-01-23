@@ -7,5 +7,3 @@ def test_adds_two():
 
     assert result1 == 4
     assert result2 == 2
-
-
