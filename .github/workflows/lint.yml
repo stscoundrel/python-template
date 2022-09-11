@@ -25,3 +25,4 @@ jobs:
       run: |
         pipenv run lint
         pipenv run black-check
+        pipenv run isort-check
